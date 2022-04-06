@@ -1,3 +1,10 @@
+mod ownership;
+
 fn main() {
-    println!("Hello, world!");
+    ownership::simple();
+    ownership::transferred();
+    ownership::clonning();
+    ownership::pluralizing();
+
+    println!("\nEnd");
 }
