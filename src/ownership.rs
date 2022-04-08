@@ -12,7 +12,7 @@ pub fn transferred() {
 pub fn clonning() {
     let a = String::from("hello");
     say(a.clone());
-    println!("I say, {} owership clonned!", a);
+    println!("I say, {} ownership clonned!", a);
 }
 
 pub fn pluralizing() {

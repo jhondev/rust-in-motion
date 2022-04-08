@@ -1,3 +1,10 @@
+#[macro_use]
+extern crate quick_error;
+#[macro_use]
+extern crate error_chain;
+// #[macro_use]
+// extern crate failure_derive;
+
 mod borrowing;
 mod error_handling;
 mod lifetimes;
@@ -20,6 +27,15 @@ fn main() {
     error_handling::handle_result();
     error_handling::box_error();
     if let Err(e) = error_handling::create_document("filename") {
+        println!("{}", e)
+    }
+    if let Err(e) = error_handling::create_document_quick_error("filename") {
+        println!("{}", e)
+    }
+    if let Err(e) = error_handling::create_document_error_chain("filename") {
+        println!("{}", e)
+    }
+    if let Err(e) = error_handling::create_document_failure_derive("filename") {
         println!("{}", e)
     }
 
