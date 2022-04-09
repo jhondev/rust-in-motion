@@ -39,6 +39,22 @@ fn main() {
 
     println!("\n***lifetimes***\n");
     lifetimes::concrete_lifetimes();
+    lifetimes::generic_lifetimes();
+    println!("generic {:?}", lifetimes::simulate_game("fork", "break"));
+    println!(
+        "longer book {}",
+        lifetimes::title_of_longer(
+            &lifetimes::Book {
+                title: "Book 1".to_owned(),
+                pages: 2
+            },
+            &lifetimes::Book {
+                title: "Book 2".to_owned(),
+                pages: 5
+            }
+        )
+    );
+    println!("static lftms {:?}", lifetimes::return_first_two_static());
 
     println!("\nEnd");
 }
