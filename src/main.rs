@@ -2,8 +2,6 @@
 extern crate quick_error;
 #[macro_use]
 extern crate error_chain;
-// #[macro_use]
-// extern crate failure_derive;
 
 mod borrowing;
 mod error_handling;
@@ -40,7 +38,7 @@ fn main() {
     }
 
     println!("\n***lifetimes***\n");
-    //lifetimes::
+    lifetimes::concrete_lifetimes();
 
     println!("\nEnd");
 }
